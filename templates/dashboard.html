@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Welcome</h1>
+              <span class="subheading">{{params['tag_line1']}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <h1>Basic Actions</h1>
+          <a class="btn btn-success " href="/edit/0">Add a new post</a>
+          <a class="btn btn-primary " href="/logout">LogOut</a>
+
+
+          <hr>
+        <h1>Upload a File</h1>
+            <form action="/uploader" method="post" enctype="multipart/form-data">
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+              <button class="btn btn-secondary type="submit">Submit</button>
+
+</form>
+        <hr>
+     <!-- Todo: Fetch it using for loop from the database -->
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">SNo</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for post in posts %}
+
+    <tr>
+      <th scope="row">{{post.sno}}</th>
+      <td>{{post.title}}</td>
+      <td>{{post.date}}</td>
+      <td><a class="btn btn-warning float-right" href="/edit/{{post.sno}}">Edit</a></td>
+        <td><a class="btn btn-danger btn-xs float-right" href="/delete/{{post.sno}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

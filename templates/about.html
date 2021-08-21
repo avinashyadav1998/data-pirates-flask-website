@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static',filename='img/about-bg.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>About Me</h1>
+            <span class="subheading">{{ params.about_me }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>Bad programmers worry about the code. Good programmers worry about data structures and their relationships</p>
+    </div>
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>Some people want it to happen, some people wish it would happen, others make it happen</p>
+        <p>Don't stop when you're tired; stop when you're done</p>
+    </div>
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h6> BI vs ML :) :)</h6>
+        <p>It's about finding that balance where you have one foot in the familiar, one foot in the unfamiliar.
+          If you have two feet in the unfamiliar it's overwhelming.
+          If you have two feet in the familiar then there's just boredom.
+          It's about having both</p>
+    </div>
+  </div>
+  </div>
+
+  <hr>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+{% endblock %}

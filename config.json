@@ -1,0 +1,18 @@
+{
+  "params" :
+  {
+    "local_server" : "True",
+    "local_uri" : "mysql+mysqlconnector://root:@localhost/blog",
+    "about_me" : "There are 10 types of people in this world, those who understand binary and those who don't.",
+    "no_of_posts" : 4,
+    "blog_name" : "Data Pirates",
+    "tag_line" : "Perfection is a myth !!!!!!!!",
+    "tag_line1" : "You are boss now",
+    "admin_user" : "admin",
+    "admin_password" : "admin",
+    "secret_key" : "super-secret-key",
+    "upload_location": "C:\\LEARN_EXPLORE\\INERON\\Projects\\data pirates website full stack\\flask_basics\\static\\uploaded_files"
+  }
+}
+
+
