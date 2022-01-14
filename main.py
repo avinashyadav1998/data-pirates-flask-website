@@ -92,6 +92,13 @@ def home():
 def about():
     return render_template('about.html',params=params)
 
+'''  #testing Area  '''
+@app.route("/explore")
+def explore():
+    return render_template('explore.html',params=params)
+
+''' testing Area End'''
+
 
 @app.route("/contact", methods = ['GET', 'POST'])
 def contact():
